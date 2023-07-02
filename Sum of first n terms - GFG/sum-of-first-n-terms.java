@@ -24,11 +24,21 @@ class GFG {
 
 class Solution {
     long sumOfSeries(long N) {
-        // code here
-        long sum=0;
-        for(long i=1;i<=N;i++){
-            sum+=i*i*i;
+        // long sum=0;
+        // for(long i=1;i<=N;i++){
+        //     sum+=i*i*i;
+        // }
+        // return sum;
+        
+
+
+        long sum=N*N*N;
+        if(N<1){
+            return sum;
         }
+        
+        sum+=sumOfSeries(N-1);
+        
         return sum;
     }
 }
