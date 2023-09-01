@@ -12,13 +12,18 @@ public class Solution {
         
 //         return count;
         
-        int helper=1;
-        for(int i=1;i<=32;i++){
-            if((helper & n)!=0){
-                count++;
-            }
+//         int helper=1;
+//         for(int i=1;i<=32;i++){
+//             if((helper & n)!=0){
+//                 count++;
+//             }
             
-            helper=helper<<1;
+//             helper=helper<<1;
+//         }
+        
+        while(n!=0){
+            n=n&(n-1);
+            count++;
         }
         
         return count;
