@@ -10,20 +10,20 @@ class Solution {
 
         for (Map.Entry<Integer,Integer> entry: map.entrySet()){
             int count=entry.getValue();
+            
             if(count<2){
                 return -1;
             }
+            int div=count/3;
             if(count==2 || count==4){
                 res+=count/2;
                 size-=count;
             }
             else if(count%3==0){
-                int div=count/3;
                 res+=div;
                 size-=count;
             }
             else if (count%3==1 || count%3==2){
-                int div=count/3;
                 res+=div+1;
                 size-=count;
 
