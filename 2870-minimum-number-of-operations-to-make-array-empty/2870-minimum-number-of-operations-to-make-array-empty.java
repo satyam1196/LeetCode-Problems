@@ -28,13 +28,9 @@ class Solution {
                 size-=count;
 
             }
-//            else if (count%3==2){
-//                int div=count/3;
-//                res+=div+1;
-//                size-=count;
-//            }
 
         }
+        
         if(size==0){
             return res;
         }
