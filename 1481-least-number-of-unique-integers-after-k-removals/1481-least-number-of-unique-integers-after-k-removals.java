@@ -14,8 +14,7 @@ class Solution {
 
         while (!pq.isEmpty() && k>0){
             Map.Entry<Integer,Integer> entry=pq.peek();
-            int val=entry.getValue();
-            k-=val;
+            k-=entry.getValue();
             if(k>=0){
                 pq.poll();
             }
